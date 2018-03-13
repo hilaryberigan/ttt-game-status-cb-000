@@ -16,11 +16,10 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  return false if board == [" "," "," "," "," "," "," "," "," "]
+  row = Array.new
+  return false if !board.none?{|i| i == "X" || i == "O"}
   WIN_COMBINATIONS.each do |combo|
-    combo.each do |element|
-      if position_taken?(board, element)
-      end
-    end
+    return combo if combo.all?{|index| position_taken?(board, index) && board[element] == "X"}
+    return combo if combo.all?{|index| position_taken?(board, index) && board[element] == "O"}     
   end
 end
