@@ -40,9 +40,10 @@ end
 
 def winner(board)
   winning = won?(board)
+  puts winning 
   if winning
     winning.detect{|i| i != " " || i != "" || i != nil}
   else
     return false
   end
-end 
+end
