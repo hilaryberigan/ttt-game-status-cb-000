@@ -41,7 +41,7 @@ end
 def winner(board)
   winning = won?(board)
   if winning.is_a?(Array)
-    return winning[0]
+    return board[winning[0]]
   else
     return nil
   end
