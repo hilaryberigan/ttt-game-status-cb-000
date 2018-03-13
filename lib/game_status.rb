@@ -40,7 +40,7 @@ end
 
 def winner(board)
   winning = won?(board)
-  puts winning 
+  puts winning.inspect
   if winning
     winning.detect{|i| i != " " || i != "" || i != nil}
   else
