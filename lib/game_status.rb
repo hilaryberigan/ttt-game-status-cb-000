@@ -29,3 +29,8 @@ end
 def full?
   board.none?{|i| i == "" || i == " " || i == nil}
 end
+
+def draw?(board)
+  return false if !won?(board)
+
+end
