@@ -35,5 +35,14 @@ def draw?(board)
 end
 
 def over?(board)
-  full?(board) || won?(board)  
+  full?(board) || won?(board)
+end
+
+def winner(board)
+  winning = won?(board)
+  if winning
+    winning.detect{|i| i != " " || i != "" || i != nil}
+  else
+    return false
+  end
 end 
