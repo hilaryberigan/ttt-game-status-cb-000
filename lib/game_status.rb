@@ -17,9 +17,10 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   row = Array.new
-  return false if !board.none?{|i| i == "X" || i == "O"}
+  return false if board.none?{|i| i == "X" || i == "O"}
+
   WIN_COMBINATIONS.each do |combo|
     return combo if combo.all?{|index| position_taken?(board, index) && board[element] == "X"}
-    return combo if combo.all?{|index| position_taken?(board, index) && board[element] == "O"}     
+    return combo if combo.all?{|index| position_taken?(board, index) && board[element] == "O"}
   end
 end
