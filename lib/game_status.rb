@@ -23,4 +23,5 @@ def won?(board)
     return combo if combo.all?{|index| position_taken?(board, index) && board[index] == "X"}
     return combo if combo.all?{|index| position_taken?(board, index) && board[index] == "O"}
   end
+  returns false
 end
