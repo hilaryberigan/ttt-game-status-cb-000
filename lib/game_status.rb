@@ -41,8 +41,9 @@ end
 def winner(board)
   winning = won?(board)
   if winning.is_a?(Array)
-    winning.detect{|i| i != " " || i != "" || i != nil}
+    who_won = winning.detect{|i| i != " " || i != "" || i != nil}
+    return who_won
   else
-    return nil 
+    return nil
   end
 end
