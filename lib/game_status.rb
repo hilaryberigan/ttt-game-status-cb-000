@@ -21,5 +21,6 @@ def won?(board)
     combo.each do |element|
       if position_taken?(board, element)
       end
+    end
   end
 end
