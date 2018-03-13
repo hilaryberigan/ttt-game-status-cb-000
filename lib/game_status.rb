@@ -40,10 +40,9 @@ end
 
 def winner(board)
   winning = won?(board)
-  puts winning.inspect
-  if winning
+  if winning.is_a?(Array)
     winning.detect{|i| i != " " || i != "" || i != nil}
   else
-    return false
+    return nil 
   end
 end
